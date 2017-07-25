@@ -100,13 +100,41 @@
                     <connections>
                         <segue destination="KRa-Co-5s8" kind="relationship" relationship="viewControllers" id="eFX-Os-wBK"/>
                         <segue destination="ECJ-1w-di1" kind="relationship" relationship="viewControllers" id="Ssd-YC-iEL"/>
-                        <segue destination="n4u-Xv-PVz" kind="relationship" relationship="viewControllers" id="5lR-mi-mXg"/>
+                        <segue destination="dLZ-mR-Zr0" kind="relationship" relationship="viewControllers" id="5lR-mi-mXg"/>
                         <segue destination="DPq-dJ-epD" kind="relationship" relationship="viewControllers" id="bDt-mE-u9L"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbq-6h-pSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852" y="138.98050974512745"/>
+        </scene>
+        <!--Find People-->
+        <scene sceneID="c39-5c-qHN">
+            <objects>
+                <viewController id="dLZ-mR-Zr0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jc5-yF-NcD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ikd-eR-Ok3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VaK-Jx-mQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZp-27-yYA">
+                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Find People" id="YVH-9S-F5i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJI-2t-DYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669.5999999999999" y="989.95502248875573"/>
         </scene>
         <!--Group-->
         <scene sceneID="OH9-cM-cgi">
@@ -116,7 +144,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJs-bC-0ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="95"/>
+            <point key="canvasLocation" x="1670" y="238"/>
         </scene>
         <!--Home-->
         <scene sceneID="cK6-Ok-zi7">
@@ -126,7 +154,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zw6-d7-8ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="36"/>
+            <point key="canvasLocation" x="1670" y="-476"/>
         </scene>
         <!--Settings-->
         <scene sceneID="apL-nU-jPp">
@@ -136,17 +164,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izL-gy-VL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="242"/>
-        </scene>
-        <!--Find-->
-        <scene sceneID="cZF-zs-zms">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Find" id="n4u-Xv-PVz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="osG-Og-qsh"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="061-cv-jtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1413" y="170"/>
+            <point key="canvasLocation" x="852" y="990"/>
         </scene>
     </scenes>
 </document>

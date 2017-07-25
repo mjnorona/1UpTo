@@ -16,6 +16,10 @@
 		50442DD11F26B1BB00C75FCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50442DD01F26B1BB00C75FCC /* GoogleService-Info.plist */; };
 		50442DD71F26C58E00C75FCC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DD61F26C58E00C75FCC /* HomeViewController.swift */; };
 		50442DD91F26D85400C75FCC /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DD81F26D85400C75FCC /* CustomCell.swift */; };
+		50442DE11F27BB5100C75FCC /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DDF1F27BB5100C75FCC /* Group.storyboard */; };
+		50442DE31F27BB7500C75FCC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE21F27BB7500C75FCC /* Home.storyboard */; };
+		50442DE61F27BB8900C75FCC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE41F27BB8900C75FCC /* Settings.storyboard */; };
+		50442DE81F27BB9C00C75FCC /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE71F27BB9C00C75FCC /* Find.storyboard */; };
 		9B0B1E414F7B6B3385F9A56A /* Pods_1UpToTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */; };
 		E89D4FCC96F86AD6790FDFE1 /* Pods_1UpTo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,10 @@
 		50442DD21F26B20500C75FCC /* 1UpTo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "1UpTo-Bridging-Header.h"; sourceTree = "<group>"; };
 		50442DD61F26C58E00C75FCC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		50442DD81F26D85400C75FCC /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		50442DE01F27BB5100C75FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Group.storyboard; sourceTree = "<group>"; };
+		50442DE21F27BB7500C75FCC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		50442DE51F27BB8900C75FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		50442DE71F27BB9C00C75FCC /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		67441484D646EA50B0BFF9E6 /* Pods-1UpTo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1UpTo.release.xcconfig"; path = "Pods/Target Support Files/Pods-1UpTo/Pods-1UpTo.release.xcconfig"; sourceTree = "<group>"; };
 		7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpTo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpToTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +128,10 @@
 				50442DB21F26B01E00C75FCC /* ViewController.swift */,
 				50442DD61F26C58E00C75FCC /* HomeViewController.swift */,
 				50442DB41F26B01E00C75FCC /* Main.storyboard */,
+				50442DE71F27BB9C00C75FCC /* Find.storyboard */,
+				50442DE41F27BB8900C75FCC /* Settings.storyboard */,
+				50442DE21F27BB7500C75FCC /* Home.storyboard */,
+				50442DDF1F27BB5100C75FCC /* Group.storyboard */,
 				50442DB71F26B01E00C75FCC /* Assets.xcassets */,
 				50442DB91F26B01E00C75FCC /* LaunchScreen.storyboard */,
 				50442DBC1F26B01E00C75FCC /* Info.plist */,
@@ -234,7 +246,11 @@
 				50442DBB1F26B01E00C75FCC /* LaunchScreen.storyboard in Resources */,
 				50442DD11F26B1BB00C75FCC /* GoogleService-Info.plist in Resources */,
 				50442DB81F26B01E00C75FCC /* Assets.xcassets in Resources */,
+				50442DE31F27BB7500C75FCC /* Home.storyboard in Resources */,
 				50442DB61F26B01E00C75FCC /* Main.storyboard in Resources */,
+				50442DE11F27BB5100C75FCC /* Group.storyboard in Resources */,
+				50442DE61F27BB8900C75FCC /* Settings.storyboard in Resources */,
+				50442DE81F27BB9C00C75FCC /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +401,22 @@
 				50442DBA1F26B01E00C75FCC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		50442DDF1F27BB5100C75FCC /* Group.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50442DE01F27BB5100C75FCC /* Base */,
+			);
+			name = Group.storyboard;
+			sourceTree = "<group>";
+		};
+		50442DE41F27BB8900C75FCC /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50442DE51F27BB8900C75FCC /* Base */,
+			);
+			name = Settings.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
