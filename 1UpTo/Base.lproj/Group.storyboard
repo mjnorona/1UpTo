@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dKQ-5M-5U2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dKQ-5M-5U2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -8,7 +12,7 @@
         <!--Groups-->
         <scene sceneID="xwp-UV-eEl">
             <objects>
-                <viewController id="4Dc-1u-UGo" sceneMemberID="viewController">
+                <viewController id="4Dc-1u-UGo" customClass="GroupViewController" customModule="_UpTo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ey-gK-Ugo"/>
                         <viewControllerLayoutGuide type="bottom" id="T5c-uI-BqP"/>
@@ -26,12 +30,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Groups" id="P5b-kS-dEM">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="MtG-uz-fjO"/>
                         <barButtonItem key="rightBarButtonItem" title="Create" id="dse-RD-WrV">
                             <connections>
                                 <segue destination="kwA-Mc-ZLD" kind="presentation" id="yxG-4r-Mne"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBtn" destination="MtG-uz-fjO" id="nyz-Dh-jGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xxq-oN-v4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,8 +133,7 @@
                     <tabBarItem key="tabBarItem" title="Groups" id="jYS-rO-gXs"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N62-o4-WWJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="N62-o4-WWJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
