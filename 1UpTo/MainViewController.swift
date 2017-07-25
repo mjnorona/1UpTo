@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, GIDSignInUIDelegate {
+class MainViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var signInButton: GIDSignInButton!
 

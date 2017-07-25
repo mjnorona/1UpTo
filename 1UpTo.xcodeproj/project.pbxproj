@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50442DB11F26B01E00C75FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DB01F26B01E00C75FCC /* AppDelegate.swift */; };
-		50442DB31F26B01E00C75FCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DB21F26B01E00C75FCC /* ViewController.swift */; };
+		50442DB31F26B01E00C75FCC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DB21F26B01E00C75FCC /* MainViewController.swift */; };
 		50442DB61F26B01E00C75FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DB41F26B01E00C75FCC /* Main.storyboard */; };
 		50442DB81F26B01E00C75FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50442DB71F26B01E00C75FCC /* Assets.xcassets */; };
 		50442DBB1F26B01E00C75FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DB91F26B01E00C75FCC /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		3A543F0177D128802C8CC0D9 /* Pods-1UpTo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1UpTo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1UpTo/Pods-1UpTo.debug.xcconfig"; sourceTree = "<group>"; };
 		50442DAD1F26B01E00C75FCC /* 1UpTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1UpTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50442DB01F26B01E00C75FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50442DB21F26B01E00C75FCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50442DB21F26B01E00C75FCC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		50442DB51F26B01E00C75FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50442DB71F26B01E00C75FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50442DBA1F26B01E00C75FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,9 +142,10 @@
 				93E69E1F1F27BDB8000DC0AF /* SWRevealViewController.h */,
 				93E69E201F27BDB8000DC0AF /* SWRevealViewController.m */,
 				50442DB01F26B01E00C75FCC /* AppDelegate.swift */,
-				50442DB21F26B01E00C75FCC /* ViewController.swift */,
+				50442DB21F26B01E00C75FCC /* MainViewController.swift */,
 				50442DD61F26C58E00C75FCC /* HomeViewController.swift */,
 				50442DB41F26B01E00C75FCC /* Main.storyboard */,
+
 				93E69E261F27D77A000DC0AF /* FriendsViewController.swift */,
 				93E69E281F27D797000DC0AF /* PostsViewController.swift */,
 				93E69E2A1F27D7A8000DC0AF /* MemoriesViewController.swift */,
@@ -155,6 +156,7 @@
 				50442DE21F27BB7500C75FCC /* Home.storyboard */,
 				50442DDF1F27BB5100C75FCC /* Group.storyboard */,
 				93E69E2C1F27D9F5000DC0AF /* GroupViewController.swift */,
+
 				50442DB71F26B01E00C75FCC /* Assets.xcassets */,
 				50442DB91F26B01E00C75FCC /* LaunchScreen.storyboard */,
 				50442DBC1F26B01E00C75FCC /* Info.plist */,
@@ -384,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				93E69E271F27D77A000DC0AF /* FriendsViewController.swift in Sources */,
 				93E69E2B1F27D7A8000DC0AF /* MemoriesViewController.swift in Sources */,
 				50442DB31F26B01E00C75FCC /* ViewController.swift in Sources */,
@@ -391,6 +394,7 @@
 				93E69E231F27C255000DC0AF /* MenuViewController.swift in Sources */,
 				93E69E291F27D797000DC0AF /* PostsViewController.swift in Sources */,
 				93E69E251F27C301000DC0AF /* MenuTableViewCell.swift in Sources */,
+
 				50442DB11F26B01E00C75FCC /* AppDelegate.swift in Sources */,
 				93E69E211F27BDB8000DC0AF /* SWRevealViewController.m in Sources */,
 				50442DD91F26D85400C75FCC /* CustomCell.swift in Sources */,
