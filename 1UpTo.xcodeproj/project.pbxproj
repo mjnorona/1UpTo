@@ -15,6 +15,7 @@
 		50442DC61F26B01E00C75FCC /* _UpToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DC51F26B01E00C75FCC /* _UpToTests.swift */; };
 		50442DD11F26B1BB00C75FCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50442DD01F26B1BB00C75FCC /* GoogleService-Info.plist */; };
 		50442DD71F26C58E00C75FCC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DD61F26C58E00C75FCC /* HomeViewController.swift */; };
+		50442DD91F26D85400C75FCC /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442DD81F26D85400C75FCC /* CustomCell.swift */; };
 		9B0B1E414F7B6B3385F9A56A /* Pods_1UpToTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */; };
 		E89D4FCC96F86AD6790FDFE1 /* Pods_1UpTo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		50442DD01F26B1BB00C75FCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50442DD21F26B20500C75FCC /* 1UpTo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "1UpTo-Bridging-Header.h"; sourceTree = "<group>"; };
 		50442DD61F26C58E00C75FCC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		50442DD81F26D85400C75FCC /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		67441484D646EA50B0BFF9E6 /* Pods-1UpTo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1UpTo.release.xcconfig"; path = "Pods/Target Support Files/Pods-1UpTo/Pods-1UpTo.release.xcconfig"; sourceTree = "<group>"; };
 		7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpTo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpToTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				50442DBC1F26B01E00C75FCC /* Info.plist */,
 				50442DD01F26B1BB00C75FCC /* GoogleService-Info.plist */,
 				50442DD21F26B20500C75FCC /* 1UpTo-Bridging-Header.h */,
+				50442DD81F26D85400C75FCC /* CustomCell.swift */,
 			);
 			path = 1UpTo;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			files = (
 				50442DB31F26B01E00C75FCC /* ViewController.swift in Sources */,
 				50442DB11F26B01E00C75FCC /* AppDelegate.swift in Sources */,
+				50442DD91F26D85400C75FCC /* CustomCell.swift in Sources */,
 				50442DD71F26C58E00C75FCC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
