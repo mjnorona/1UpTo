@@ -8,19 +8,34 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GIDSignInUIDelegate  {
     
     let menuItems = ["Friends", "Posts", "Memories"]
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    @IBOutlet weak var userNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signInSilently()
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        let currentUser = GIDSignIn.sharedInstance().currentUser
+        let profileURL = currentUser?.profile.imageURL(withDimension: 50)
+        profileImageView.image = UIImage(data : NSData(contentsOf : profileURL!)! as Data)
+        profileImageView.isHidden = false
+        userNameLabel.text = currentUser?.profile.name! ?? ""
+        print("Welcome, \(currentUser?.profile.name! ?? "")")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

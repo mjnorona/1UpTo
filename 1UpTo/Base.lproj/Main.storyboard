@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -90,7 +91,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pOe-hN-HcO">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Tda-2O-B46" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tda-2O-B46" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RIV-Dq-yXF">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -151,24 +152,49 @@
                                     <outlet property="delegate" destination="TXD-9i-exf" id="RXD-rN-uUV"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ntW-tG-eQj">
+                                <rect key="frame" x="16" y="28" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="a3h-NZ-VEO"/>
+                                    <constraint firstAttribute="width" constant="70" id="ojW-3S-aJd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7E-hj-KQ3">
+                                <rect key="frame" x="16" y="107" width="170" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="lfZ-hv-6Uw"/>
+                                    <constraint firstAttribute="height" constant="25" id="vBk-3a-WOz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ntW-tG-eQj" firstAttribute="top" secondItem="esv-s9-dTU" secondAttribute="bottom" constant="8" id="94S-9W-eYi"/>
                             <constraint firstAttribute="trailing" secondItem="rnS-RC-V4Z" secondAttribute="trailing" id="Ckb-EL-3GQ"/>
                             <constraint firstItem="Vbr-V6-jxC" firstAttribute="top" secondItem="rnS-RC-V4Z" secondAttribute="bottom" id="GrR-Cg-Q9E"/>
+                            <constraint firstItem="ntW-tG-eQj" firstAttribute="leading" secondItem="txu-WH-05W" secondAttribute="leadingMargin" id="Jsw-b0-7bW"/>
+                            <constraint firstItem="C7E-hj-KQ3" firstAttribute="leading" secondItem="txu-WH-05W" secondAttribute="leadingMargin" id="VXm-sZ-0bk"/>
                             <constraint firstItem="rnS-RC-V4Z" firstAttribute="leading" secondItem="txu-WH-05W" secondAttribute="leading" id="aUz-2X-zVH"/>
+                            <constraint firstItem="C7E-hj-KQ3" firstAttribute="top" secondItem="ntW-tG-eQj" secondAttribute="bottom" constant="9" id="dCZ-iW-fg0"/>
                             <constraint firstItem="rnS-RC-V4Z" firstAttribute="top" secondItem="esv-s9-dTU" secondAttribute="bottom" constant="120" id="yYn-bI-3zx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="ntW-tG-eQj" id="0Cb-a5-vtz"/>
+                        <outlet property="userNameLabel" destination="C7E-hj-KQ3" id="0BJ-1p-Cvy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaA-uK-wye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063.1999999999998" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2061.5999999999999" y="179.46026986506749"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="T2p-J5-9Z9">
             <objects>
-                <viewController id="LG0-yV-pXn" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SWRevealViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LG0-yV-pXn" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cia-5q-b0e"/>
                         <viewControllerLayoutGuide type="bottom" id="DeG-KH-7Jc"/>
@@ -242,6 +268,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LXs-83-1dX">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="OaZ-55-Ww9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Back" id="k3C-vJ-XSO">
+                            <connections>
+                                <action selector="backBtnPressed:" destination="B1o-wn-WGt" id="AtD-eE-Zev"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -279,6 +310,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eDY-aE-xet">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="vUj-4j-xvu"/>
+                        <barButtonItem key="rightBarButtonItem" title="Back" id="n3g-WT-di6">
+                            <connections>
+                                <action selector="backBtnPressed:" destination="Vcz-EK-uEA" id="kiZ-Jp-YMB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -316,6 +352,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="9y6-tP-aK2">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="M3R-rG-1xk"/>
+                        <barButtonItem key="rightBarButtonItem" title="Back" id="b8s-Ct-j7a">
+                            <connections>
+                                <action selector="backBtnPressed:" destination="BEL-Ha-c3j" id="Eo2-Yw-Cyo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

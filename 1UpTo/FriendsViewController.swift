@@ -26,6 +26,12 @@ class FriendsViewController: UIViewController {
     }
     
 
+    @IBAction func backBtnPressed(_ sender: UIBarButtonItem) {
+        let mainStoryboard : UIStoryboard = UIStoryboard(name : "Main", bundle : nil)
+        let destController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+        present(destController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
