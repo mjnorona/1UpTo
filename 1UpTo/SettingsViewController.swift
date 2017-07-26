@@ -12,6 +12,8 @@ import GoogleAPIClientForREST
 class SettingsViewController: UIViewController,GIDSignInUIDelegate {
     
     private let service = GTLRCalendarService()
+    
+    var userEmail = ""
 
     @IBOutlet weak var output: UITextView!
     override func viewDidLoad() {
@@ -22,6 +24,8 @@ class SettingsViewController: UIViewController,GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().signInSilently()
         
         let currentUser = GIDSignIn.sharedInstance().currentUser
+        print(currentUser?.profile.email ?? "")
+        userEmail = (currentUser?.profile.email)!
         print(GIDSignIn.sharedInstance().hasAuthInKeychain())
         print("Setting VC: " , currentUser?.profile.name ?? "")
         service.authorizer = currentUser?.authentication.fetcherAuthorizer()
@@ -100,85 +104,87 @@ class SettingsViewController: UIViewController,GIDSignInUIDelegate {
         present(alert, animated: true, completion: nil)
     }
     
-//    @IBAction func createBtnPressed(_ sender: UIButton) {
-//        createEvent((currentUser?.profile.email)!, participantEmail: "", startDate: Date(), endDate: Date(timeInterval: 60*60*3, since: Date()), summary: "CREATE EVENT TEST", recurrenceRule: "")
-//    }
-//    
-//
-//    func createEvent(_ userEmail: String, participantEmail: String, startDate: Date, endDate: Date, summary: String, recurrenceRule: String) {
-//        let event = GTLRCalendar_Event()
-//        
-//        event.start = GTLRCalendar_EventDateTime()
-//        event.start?.dateTime = GTLRDateTime(date: startDate)
-//        event.start?.timeZone = TimeZone.autoupdatingCurrent.identifier
-//        event.end = GTLRCalendar_EventDateTime()
-//        event.end?.dateTime = GTLRDateTime(date: endDate)
-//        event.end?.timeZone = TimeZone.autoupdatingCurrent.identifier
-//        event.summary = summary
-//        //        event.recurrence = [recurrenceRule]
-//        
-//        let attendee1 = GTLRCalendar_EventAttendee()
+    @IBAction func createBtnPressed(_ sender: UIButton) {
+        createEvent(userEmail, participantEmail: "erickjin.lui@gmail.com", startDate: Date(), endDate: Date(timeInterval: 60*60*3, since: Date()), summary: "CREATE EVENT TEST attendee", recurrenceRule: "")
+    }
+    
+
+    func createEvent(_ userEmail: String, participantEmail: String, startDate: Date, endDate: Date, summary: String, recurrenceRule: String) {
+        let event = GTLRCalendar_Event()
+        
+        event.creator?.email = userEmail
+        
+        event.start = GTLRCalendar_EventDateTime()
+        event.start?.dateTime = GTLRDateTime(date: startDate)
+        event.start?.timeZone = TimeZone.autoupdatingCurrent.identifier
+        event.end = GTLRCalendar_EventDateTime()
+        event.end?.dateTime = GTLRDateTime(date: endDate)
+        event.end?.timeZone = TimeZone.autoupdatingCurrent.identifier
+        event.summary = summary
+        //        event.recurrence = [recurrenceRule]
+        
+        let attendee1 = GTLRCalendar_EventAttendee()
 //        //        let attendee2 = GTLRCalendar_EventAttendee()
-//        attendee1.email = userEmail
+        attendee1.email = participantEmail
 //        //        attendee2.email = participantEmail
 //        //        event.attendees = [attendee1, attendee2]
-//        event.attendees = [attendee1]
-//        
-//        //        let query = GTLQueryCalendar.queryForEventsInsert(withObject: event, calendarId: "primary")
-//        let query = GTLRCalendarQuery_EventsInsert.query(withObject: event, calendarId: "primary")
-//        
-//        service.executeQuery(
-//            query,
-//            delegate: self,
-//            didFinish: #selector(displayResultSingle(ticket:finishedWithObject:error:)))
-//        
-//    }
-//
-//    func displayResultSingle(
-//        ticket: GTLRServiceTicket,
-//        finishedWithObject event : GTLRCalendar_Event,
-//        error : NSError?) {
-//        
-//        if let error = error {
-//            showAlert(title: "Error", message: error.localizedDescription)
-//            return
-//        }
-//        
-//        var eventString = ""
-//        
-//        let start  = event.start!.dateTime ?? event.start!.date!
-//        let startString = DateFormatter.localizedString(
-//            from: start.date,
-//            dateStyle: .short,
-//            timeStyle: .short
-//        )
-//        
-//        let end = event.end!.dateTime ?? event.end!.date!
-//        let endString = DateFormatter.localizedString(
-//            from: end.date,
-//            dateStyle: .short,
-//            timeStyle: .short
-//        )
-//        
-//        print(event)
-//        print("ID: " + event.identifier!)
-//        print("Start: " + startString)
-//        print("End: " + endString)
-//        if let recurringEventId = event.recurringEventId {
-//            print("Recurring Event Id: \(recurringEventId)")//use this id to aggregate events from the same recurring event
-//        }
-//        
-//        if let description = event.summary {
-//            print("Description: \(description)")
-//        }
-//        
-//        if let location = event.location {
-//            print("Location: \(location)")
-//        }
-//        print("\n")
-//        eventString += "\(startString) - \(event.summary!)\n"
-//        output.text = eventString
-//    }
+        event.attendees = [attendee1]
+        
+        //        let query = GTLQueryCalendar.queryForEventsInsert(withObject: event, calendarId: "primary")
+        let query = GTLRCalendarQuery_EventsInsert.query(withObject: event, calendarId: "primary")
+        
+        service.executeQuery(
+            query,
+            delegate: self,
+            didFinish: #selector(displayResultSingle(ticket:finishedWithObject:error:)))
+        
+    }
+
+    func displayResultSingle(
+        ticket: GTLRServiceTicket,
+        finishedWithObject event : GTLRCalendar_Event,
+        error : NSError?) {
+        
+        if let error = error {
+            showAlert(title: "Error", message: error.localizedDescription)
+            return
+        }
+        
+        var eventString = ""
+        
+        let start  = event.start!.dateTime ?? event.start!.date!
+        let startString = DateFormatter.localizedString(
+            from: start.date,
+            dateStyle: .short,
+            timeStyle: .short
+        )
+        
+        let end = event.end!.dateTime ?? event.end!.date!
+        let endString = DateFormatter.localizedString(
+            from: end.date,
+            dateStyle: .short,
+            timeStyle: .short
+        )
+        
+        print(event)
+        print("ID: " + event.identifier!)
+        print("Start: " + startString)
+        print("End: " + endString)
+        if let recurringEventId = event.recurringEventId {
+            print("Recurring Event Id: \(recurringEventId)")//use this id to aggregate events from the same recurring event
+        }
+        
+        if let description = event.summary {
+            print("Description: \(description)")
+        }
+        
+        if let location = event.location {
+            print("Location: \(location)")
+        }
+        print("\n")
+        eventString += "\(startString) - \(event.summary!)\n"
+        output.text = eventString
+    }
 
 
     /*
