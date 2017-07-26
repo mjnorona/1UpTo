@@ -14,8 +14,7 @@ class GroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         menuBtn.target = revealViewController()
         menuBtn.action = #selector(SWRevealViewController.revealToggle(_:))
     }
