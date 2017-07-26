@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Google
+import GoogleSignIn
+import GoogleAPIClientForREST
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
+    private let scopes = [kGTLRAuthScopeCalendar]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -24,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         
         GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().scopes = scopes
         return true
     }
     
