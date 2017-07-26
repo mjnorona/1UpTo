@@ -12,6 +12,11 @@ PODS:
   - Google/SignIn (3.1.0):
     - Google/Core
     - GoogleSignIn (~> 4.0)
+  - GoogleAPIClientForREST/Calendar (1.2.1):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleAPIClientForREST/Core (1.2.1):
+    - GTMSessionFetcher (>= 1.1.7)
   - GoogleSignIn (4.0.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -38,6 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - Google/SignIn
+  - GoogleAPIClientForREST/Calendar (~> 1.2.1)
   - JTAppleCalendar (~> 7.0)
 
 SPEC CHECKSUMS:
@@ -45,12 +51,13 @@ SPEC CHECKSUMS:
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
   Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
+  GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   JTAppleCalendar: 6def48ecd0daae1d5baaa45e813124c2a20b184d
 
-PODFILE CHECKSUM: c20301af88aadb15e51cca417dfd215c6c645a1e
+PODFILE CHECKSUM: b14f94c44da49f5a425befd2c201198fe514de67
 
 COCOAPODS: 1.2.1
