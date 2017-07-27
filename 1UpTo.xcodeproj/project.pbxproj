@@ -20,8 +20,12 @@
 		50442DE31F27BB7500C75FCC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE21F27BB7500C75FCC /* Home.storyboard */; };
 		50442DE61F27BB8900C75FCC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE41F27BB8900C75FCC /* Settings.storyboard */; };
 		50442DE81F27BB9C00C75FCC /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE71F27BB9C00C75FCC /* Find.storyboard */; };
+
+		9303D0D41F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */; };
+
 		50442E561F2966BA00C75FCC /* AddEditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */; };
 		50442E581F2A77F000C75FCC /* CustomDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */; };
+
 		93AC0EE01F294AB80064E9F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */; };
 		93AC0EE21F296A2B0064E9F8 /* calendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EE11F296A2B0064E9F8 /* calendarModel.swift */; };
 		93AC0EE41F296E9E0064E9F8 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */; };
@@ -73,9 +77,10 @@
 		67441484D646EA50B0BFF9E6 /* Pods-1UpTo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1UpTo.release.xcconfig"; path = "Pods/Target Support Files/Pods-1UpTo/Pods-1UpTo.release.xcconfig"; sourceTree = "<group>"; };
 		7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpTo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpToTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemberInGroupTableViewController.swift; sourceTree = "<group>"; };
 		93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		93AC0EE11F296A2B0064E9F8 /* calendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarModel.swift; sourceTree = "<group>"; };
-		93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
+		93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberTableViewController.swift; path = ../MemberTableViewController.swift; sourceTree = "<group>"; };
 		93E69E1F1F27BDB8000DC0AF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		93E69E201F27BDB8000DC0AF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		93E69E221F27C255000DC0AF /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +134,6 @@
 		50442DA41F26B01E00C75FCC = {
 			isa = PBXGroup;
 			children = (
-				93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */,
 				50442DAF1F26B01E00C75FCC /* 1UpTo */,
 				50442DC41F26B01E00C75FCC /* 1UpToTests */,
 				50442DAE1F26B01E00C75FCC /* Products */,
@@ -168,6 +172,8 @@
 				50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */,
 				50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */,
 				50442DDF1F27BB5100C75FCC /* Group.storyboard */,
+				93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */,
+				9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */,
 				93AC0EE11F296A2B0064E9F8 /* calendarModel.swift */,
 				93E69E2C1F27D9F5000DC0AF /* GroupViewController.swift */,
 				50442DB71F26B01E00C75FCC /* Assets.xcassets */,
@@ -406,6 +412,7 @@
 				93E69E2D1F27D9F5000DC0AF /* GroupViewController.swift in Sources */,
 				93E69E231F27C255000DC0AF /* MenuViewController.swift in Sources */,
 				93AC0EE21F296A2B0064E9F8 /* calendarModel.swift in Sources */,
+				9303D0D41F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift in Sources */,
 				93E69E291F27D797000DC0AF /* PostsViewController.swift in Sources */,
 				93E69E251F27C301000DC0AF /* MenuTableViewCell.swift in Sources */,
 				50442DB11F26B01E00C75FCC /* AppDelegate.swift in Sources */,
