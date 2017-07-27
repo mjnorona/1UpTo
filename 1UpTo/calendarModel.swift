@@ -16,7 +16,7 @@ class calendarModel {
         // Specify the url that we will be sending the GET Request to
         
         
-        let url = URL(string: "http://localhost:8000/")
+        let url = URL(string: "http://localhost:8000/groups")
         
         // Create a URLSession to handle the request tasks
         let session = URLSession.shared
