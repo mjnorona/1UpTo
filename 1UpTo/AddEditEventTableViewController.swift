@@ -14,6 +14,7 @@ class AddEditEventTableViewController: UITableViewController {
     var pickedDate: Date?
     
     
+    @IBOutlet weak var titleLabel: UITextField!
     @IBOutlet weak var startCell: UITableViewCell!
     @IBOutlet weak var endCell: UITableViewCell!
     @IBOutlet weak var alertCell: UITableViewCell!
@@ -39,6 +40,7 @@ class AddEditEventTableViewController: UITableViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
+        delegate?.addButtonPressed(by: self)
     }
     
     

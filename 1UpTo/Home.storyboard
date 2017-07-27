@@ -408,6 +408,7 @@
                         <outlet property="startDateLabel" destination="BxF-KP-QzC" id="9cj-vZ-Jx0"/>
                         <outlet property="startDatePicker" destination="KVS-tU-q6l" id="jfa-kV-L7f"/>
                         <outlet property="startTimeLabel" destination="JOV-2T-tlh" id="sYd-QJ-c7r"/>
+                        <outlet property="titleLabel" destination="Hlp-7g-45O" id="P6s-Kd-c0g"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKw-hS-X0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -421,7 +422,7 @@
                     <tabBarItem key="tabBarItem" title="Home" id="st1-C2-oEV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oXH-8N-dFM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oXH-8N-dFM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -439,7 +440,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pHi-Af-8x0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Gx2-dD-C3n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gx2-dD-C3n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
