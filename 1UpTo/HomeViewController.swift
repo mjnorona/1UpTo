@@ -12,6 +12,8 @@ import JTAppleCalendar
 class HomeViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     let formatter = DateFormatter()
+    var current = Date()
+
     
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
@@ -40,6 +42,7 @@ class HomeViewController: UIViewController {
             let navigation = segue.destination as! UINavigationController
             let addEditEventTableViewController = navigation.topViewController as! AddEditEventTableViewController
             addEditEventTableViewController.delegate = self
+            addEditEventTableViewController.pickedDate = current
             print("going here")
         }
     }
@@ -133,6 +136,8 @@ extension HomeViewController: JTAppleCalendarViewDelegate {
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
         print("DIDSELECT: ", date)
+        self.current = date
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
@@ -145,3 +150,5 @@ extension HomeViewController: JTAppleCalendarViewDelegate {
     }
     
 }
+
+

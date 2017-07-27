@@ -11,6 +11,8 @@ import UIKit
 class AddEditEventTableViewController: UITableViewController {
     let dateFormatter = DateFormatter()
     let timeFormatter = DateFormatter()
+    var pickedDate: Date?
+    
     
     @IBOutlet weak var startCell: UITableViewCell!
     @IBOutlet weak var endCell: UITableViewCell!
@@ -29,6 +31,7 @@ class AddEditEventTableViewController: UITableViewController {
     
     
     
+    
     weak var delegate: HomeViewController?
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
@@ -43,22 +46,27 @@ class AddEditEventTableViewController: UITableViewController {
         dateFormatter.dateFormat = "MMM dd, YYYY"
         timeFormatter.dateFormat = "h:mm a"
         
-        let strDate = dateFormatter.string(from: startDatePicker.date)
-        let strTime = timeFormatter.string(from: startDatePicker.date)
-        startDateLabel.text = strDate
-        startTimeLabel.text = strTime
+        let startDate = dateFormatter.string(from: startDatePicker.date)
+        let startTime = timeFormatter.string(from: startDatePicker.date)
+        
+        startDateLabel.text = startDate
+        startTimeLabel.text = startTime
     }
+    
+    
     
     
     @IBAction func endDatePickerChanged(_ sender: UIDatePicker) {
         dateFormatter.dateFormat = "MMM dd, YYYY"
         timeFormatter.dateFormat = "h:mm a"
         
-        let strDate = dateFormatter.string(from: endDatePicker.date)
-        let strTime = timeFormatter.string(from: endDatePicker.date)
-        endDateLabel.text = strDate
-        endTimeLabel.text = strTime
+        let endDate = dateFormatter.string(from: endDatePicker.date)
+        let endTime = timeFormatter.string(from: endDatePicker.date)
+        
+        endDateLabel.text = endDate
+        endTimeLabel.text = endTime
     }
+    
     
     
     
@@ -67,6 +75,35 @@ class AddEditEventTableViewController: UITableViewController {
         startCell?.textLabel?.text = "Start"
         endCell?.textLabel?.text = "End"
         alertCell.textLabel?.text = "Alert"
+        
+        dateFormatter.dateFormat = "MMM d, YYYY"
+        timeFormatter.dateFormat = "h:mm a"
+
+        
+        
+        let calendar = Calendar.current
+        
+        //starting
+        let currentDate = dateFormatter.string(from: pickedDate!)
+        let currentTime = timeFormatter.string(from: pickedDate!)
+        
+        startDateLabel.text = currentDate
+        startTimeLabel.text = currentTime
+        
+        startDatePicker.date = pickedDate!
+        
+        //ending
+        let date = calendar.date(byAdding: .minute, value: 30, to: pickedDate!)
+        
+        let laterDate = dateFormatter.string(from: date!)
+        let laterTime = timeFormatter.string(from: date!)
+        
+        endDateLabel.text = laterDate
+        endTimeLabel.text = laterTime
+        
+        endDatePicker.date = date!
+        
+        
         
         
         // Uncomment the following line to preserve selection between presentations

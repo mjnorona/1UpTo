@@ -255,21 +255,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-KP-QzC">
-                                                    <rect key="frame" x="189" y="10" width="97" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-KP-QzC">
+                                                    <rect key="frame" x="181" y="11.5" width="105" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="gm0-2J-F9D"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOV-2T-tlh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOV-2T-tlh">
                                                     <rect key="frame" x="294" y="11" width="73" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73" id="M8Q-Zx-iUp"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JOV-2T-tlh" firstAttribute="centerY" secondItem="6r3-9L-Mqr" secondAttribute="centerY" id="1aN-gz-o68"/>
+                                                <constraint firstItem="JOV-2T-tlh" firstAttribute="trailing" secondItem="6r3-9L-Mqr" secondAttribute="trailingMargin" id="aga-5P-FGw"/>
+                                                <constraint firstItem="BxF-KP-QzC" firstAttribute="centerY" secondItem="6r3-9L-Mqr" secondAttribute="centerY" id="pGk-jS-Iei"/>
+                                                <constraint firstItem="JOV-2T-tlh" firstAttribute="leading" secondItem="BxF-KP-QzC" secondAttribute="trailing" constant="8" id="tde-Ug-kCb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="8tk-b9-jBa">
@@ -285,7 +295,7 @@
                                                         <!--2017-07-27 19:32:27 +0000-->
                                                     </date>
                                                     <connections>
-                                                        <action selector="startDatePickerChanged:" destination="8hj-NU-crB" eventType="valueChanged" id="bTR-8e-GyW"/>
+                                                        <action selector="startDatePickerChanged:" destination="8hj-NU-crB" eventType="valueChanged" id="Vbn-o4-M3P"/>
                                                     </connections>
                                                 </datePicker>
                                             </subviews>
@@ -304,21 +314,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYX-u0-dd9">
-                                                    <rect key="frame" x="190" y="13" width="98" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUj-9l-LQB">
+                                                    <rect key="frame" x="294" y="13" width="73" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73" id="Mvv-ey-YeS"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUj-9l-LQB">
-                                                    <rect key="frame" x="296" y="13" width="71" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYX-u0-dd9">
+                                                    <rect key="frame" x="181" y="13" width="105" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="XOT-Pt-Iaj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AUj-9l-LQB" firstAttribute="trailing" secondItem="NK6-KC-ooJ" secondAttribute="trailingMargin" id="PBa-0h-kLm"/>
+                                                <constraint firstItem="AUj-9l-LQB" firstAttribute="leading" secondItem="bYX-u0-dd9" secondAttribute="trailing" constant="8" id="X5i-QA-X5N"/>
+                                                <constraint firstItem="bYX-u0-dd9" firstAttribute="centerY" secondItem="NK6-KC-ooJ" secondAttribute="centerY" id="nWn-pr-Ghl"/>
+                                                <constraint firstItem="AUj-9l-LQB" firstAttribute="centerY" secondItem="NK6-KC-ooJ" secondAttribute="centerY" id="oeA-36-g4a"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="bMO-lA-IAr">
@@ -334,7 +354,7 @@
                                                         <!--2017-07-27 19:46:16 +0000-->
                                                     </date>
                                                     <connections>
-                                                        <action selector="endDatePickerChanged:" destination="8hj-NU-crB" eventType="valueChanged" id="Wm8-VV-pbd"/>
+                                                        <action selector="endDatePickerChanged:" destination="8hj-NU-crB" eventType="valueChanged" id="xhb-IQ-GJH"/>
                                                     </connections>
                                                 </datePicker>
                                             </subviews>
@@ -382,7 +402,7 @@
                         <outlet property="alertCell" destination="g4Y-6P-vUQ" id="enO-n8-QUE"/>
                         <outlet property="endCell" destination="y48-sb-6Jj" id="VGR-cM-irz"/>
                         <outlet property="endDateLabel" destination="bYX-u0-dd9" id="vaL-4o-XBH"/>
-                        <outlet property="endDatePicker" destination="KVS-tU-q6l" id="e7X-KQ-NyO"/>
+                        <outlet property="endDatePicker" destination="zNp-Ov-fkp" id="mjE-FL-Eb1"/>
                         <outlet property="endTimeLabel" destination="AUj-9l-LQB" id="cov-C4-5tp"/>
                         <outlet property="startCell" destination="7Qf-pv-rmp" id="vfx-0L-sYB"/>
                         <outlet property="startDateLabel" destination="BxF-KP-QzC" id="9cj-vZ-Jx0"/>

@@ -16,7 +16,7 @@ class calendarModel {
         // Specify the url that we will be sending the GET Request to
         
         
-        let url = URL(string: "http://localhost:8000/groups")
+        let url = URL(string: "http://34.213.11.157/groups")
         
         // Create a URLSession to handle the request tasks
         let session = URLSession.shared
@@ -34,7 +34,7 @@ class calendarModel {
         // Specify the url that we will be sending the GET Request to
         
         
-        let url = URL(string: "http://localhost:8000/users")
+        let url = URL(string: "http://34.213.11.157/users")
         
         // Create a URLSession to handle the request tasks
         let session = URLSession.shared
@@ -49,7 +49,7 @@ class calendarModel {
     //add user in db
     static func addUser(username : String, userEmail: String, completionHandler : @escaping  (_ data : Data?, _ response : URLResponse?, _ error : Error?) -> Void) {
         
-        if let urlToReq = URL(string: "http://localhost:8000/add_user") {
+        if let urlToReq = URL(string: "http://34.213.11.157/add_user") {
             
             var request = URLRequest(url : urlToReq)
             
