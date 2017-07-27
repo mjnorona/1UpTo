@@ -35,6 +35,17 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddEditEventSegue" {
+            let navigation = segue.destination as! UINavigationController
+            let addEditEventTableViewController = navigation.topViewController as! AddEditEventTableViewController
+            addEditEventTableViewController.delegate = self
+            print("going here")
+        }
+    }
+    
+    
+    
     func setupCalendarView() {
         //setup calendar spacing
         calendarView.minimumLineSpacing = 0
@@ -83,15 +94,11 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //addEditViewController functions
+    func cancelButtonPressed(by controller: AddEditEventTableViewController) {
+        print("cancelled")
+        dismiss(animated: true, completion: nil)
     }
-    */
 
 }
 
@@ -136,4 +143,5 @@ extension HomeViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates)
     }
+    
 }

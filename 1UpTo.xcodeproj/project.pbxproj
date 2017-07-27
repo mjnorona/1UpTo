@@ -20,6 +20,8 @@
 		50442DE31F27BB7500C75FCC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE21F27BB7500C75FCC /* Home.storyboard */; };
 		50442DE61F27BB8900C75FCC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE41F27BB8900C75FCC /* Settings.storyboard */; };
 		50442DE81F27BB9C00C75FCC /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE71F27BB9C00C75FCC /* Find.storyboard */; };
+		50442E561F2966BA00C75FCC /* AddEditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */; };
+		50442E581F2A77F000C75FCC /* CustomDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */; };
 		93AC0EE01F294AB80064E9F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */; };
 		93E69E211F27BDB8000DC0AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E69E201F27BDB8000DC0AF /* SWRevealViewController.m */; };
 		93E69E231F27C255000DC0AF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E69E221F27C255000DC0AF /* MenuViewController.swift */; };
@@ -64,6 +66,8 @@
 		50442DE21F27BB7500C75FCC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		50442DE51F27BB8900C75FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		50442DE71F27BB9C00C75FCC /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditEventTableViewController.swift; sourceTree = "<group>"; };
+		50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDateTableViewCell.swift; sourceTree = "<group>"; };
 		67441484D646EA50B0BFF9E6 /* Pods-1UpTo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1UpTo.release.xcconfig"; path = "Pods/Target Support Files/Pods-1UpTo/Pods-1UpTo.release.xcconfig"; sourceTree = "<group>"; };
 		7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpTo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpToTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,12 +145,12 @@
 		50442DAF1F26B01E00C75FCC /* 1UpTo */ = {
 			isa = PBXGroup;
 			children = (
+				50442DB41F26B01E00C75FCC /* Main.storyboard */,
 				93E69E1F1F27BDB8000DC0AF /* SWRevealViewController.h */,
 				93E69E201F27BDB8000DC0AF /* SWRevealViewController.m */,
 				50442DB01F26B01E00C75FCC /* AppDelegate.swift */,
 				50442DB21F26B01E00C75FCC /* MainViewController.swift */,
 				50442DD61F26C58E00C75FCC /* HomeViewController.swift */,
-				50442DB41F26B01E00C75FCC /* Main.storyboard */,
 				93E69E261F27D77A000DC0AF /* FriendsViewController.swift */,
 				93E69E281F27D797000DC0AF /* PostsViewController.swift */,
 				93E69E2A1F27D7A8000DC0AF /* MemoriesViewController.swift */,
@@ -156,6 +160,8 @@
 				50442DE41F27BB8900C75FCC /* Settings.storyboard */,
 				93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */,
 				50442DE21F27BB7500C75FCC /* Home.storyboard */,
+				50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */,
+				50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */,
 				50442DDF1F27BB5100C75FCC /* Group.storyboard */,
 				93E69E2C1F27D9F5000DC0AF /* GroupViewController.swift */,
 				50442DB71F26B01E00C75FCC /* Assets.xcassets */,
@@ -397,8 +403,10 @@
 				50442DB11F26B01E00C75FCC /* AppDelegate.swift in Sources */,
 				93E69E211F27BDB8000DC0AF /* SWRevealViewController.m in Sources */,
 				50442DD91F26D85400C75FCC /* CustomCell.swift in Sources */,
+				50442E581F2A77F000C75FCC /* CustomDateTableViewCell.swift in Sources */,
 				50442DD71F26C58E00C75FCC /* HomeViewController.swift in Sources */,
 				93AC0EE01F294AB80064E9F8 /* SettingsViewController.swift in Sources */,
+				50442E561F2966BA00C75FCC /* AddEditEventTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
