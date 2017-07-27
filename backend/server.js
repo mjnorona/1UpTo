@@ -11,49 +11,98 @@ mongoose.connect('mongodb://localhost/calendar');
 
 var Schema = mongoose.Schema;
 
+var UserSchema = new mongoose.Schema({
+  name: { type: String, required: [true, 'name required'] },
+  email: { type: String, required: [true, 'email required'] },
+}, { timestamps: true });
+var User = mongoose.model('User', UserSchema)
+
 var GroupSchema = new mongoose.Schema({
   name: { type: String, required: [true, 'group name requied'] },
-  members: { type: [String], required: [true, 'members required'] },
+  members: [{type: Schema.Types.ObjectId, ref: 'User'}],
 }, { timestamps: true });
-var Group = mongoose.model('groups', GroupSchema)
+var Group = mongoose.model('Group', GroupSchema)
 
-// Index
-app.get('/', function(req, res){
+// Get all users
+app.get('/users', function(req, res){
+  User.find(function(err, data){
+    if(err) console.log(err);
+    res.send(data);
+  }).sort({'createdAt': -1})
+})
+// Get all groups
+app.get('/groups', function(req, res){
   Group.find(function(err, data){
     if(err) console.log(err);
     res.send(data);
   }).sort({'createdAt': -1})
 })
-// Form for new groups
-app.get('/new', function(req, res){
-  res.render('new')
-})
 
-app.get('/find/:name', function(req, res){
-  Group.find({name: req.params.name}, function(err, data){
-    if(err) {console.log(err);}
-    res.send(data[0].members);
+// Form for creating users
+app.get('/users/new', function(req, res){
+  res.render('users')
+})
+// Create new user if not exist
+app.post('/users/create', function(req, res){
+  User.find({email: req.body.email}, function(err, users){
+    if (users.length == 0) {
+      User.create(req.body, function(req, res){
+        if(err) console.log(err);
+      })
+    }
+    res.redirect('/users')
   })
 })
 
-// Create group
-app.post('/create', function(req, res){
+// Form for creating groups
+app.get('/groups/new', function(req, res){
+  res.render('group')
+})
+
+// Create new group
+app.post('/groups/create', function(req, res){
   Group.find({name: req.body.name}, function(err, data){
-//    console.log("DATA: ", data)
     if(err) {console.log(err);}
-    else if (data.length > 0 ){ // if group name exist, append to members
-      Group.update({name: req.body.name}, {$push: {'members': req.body.members}}, function(err, data){
-        if(err) {console.log(err);}
-        console.log(data);
-      })
-    }
-    else { // if group name doesn't exist, create new group
+    if (data.length == 0){
       Group.create(req.body, function(err, data){
         if(err) {console.log(err);}
       })
     }
-    res.redirect('/')
+    res.redirect('/groups')
   })
+})
+
+// Get all users from a group
+app.get('/users/:group_name', function(req, res){
+  Group.findOne({name: req.params.group_name})
+  .populate('members')
+  .exec(function(err, group){
+    res.send(group.members);
+  })
+})
+
+// Form for new groups
+app.get('/groups/members/new', function(req, res){
+  res.render('members')
+})
+
+// Create group members
+app.post('/members/:name', function(req, res){
+  Group.findOne({name: req.params.name}, function(err, group){
+    User.find({email: req.body.email}, function(err, user){
+      if (user.length > 0) {
+        console.log("inside if");
+        group.members.push(user[0])
+      } else {
+        console.log("inside else");
+        var user = new User(req.body);
+        group.members.push(user)
+        user.save(function(err){})
+      }
+      group.save(function(err){if(err) {console.log(err);}})
+    })
+  })
+  res.redirect('/groups')
 })
 
 app.listen(port, function(){
