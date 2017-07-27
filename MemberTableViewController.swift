@@ -40,6 +40,20 @@ class MemberTableViewController: UITableViewController {
         cell.textLabel?.text = members[indexPath.row]
         return cell
     }
+    
+    
+    @IBAction func addMemberBtnPressed(_ sender: UIBarButtonItem) {
+        
+        performSegue(withIdentifier: "AddMemberSegue", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddMemberSegue" {
+            let navController = segue.destination as! UINavigationController
+            _ = navController.topViewController as! AddMemberInGroupTableViewController
+        
+        }
+    }
 
 
 }

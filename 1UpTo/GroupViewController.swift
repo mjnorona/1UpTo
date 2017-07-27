@@ -45,21 +45,13 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "memberSegue" {
-            let controller = segue.destination as! MemberTableViewController
+            let navController = segue.destination as! UINavigationController
+            let controller = navController.topViewController as! MemberTableViewController
             controller.tempMembers = sender as? [String]
         
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     func fetchAllgroup() {
