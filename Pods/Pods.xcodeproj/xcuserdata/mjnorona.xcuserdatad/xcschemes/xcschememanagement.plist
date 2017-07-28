@@ -4,52 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>GoogleAPIClientForREST.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>JTAppleCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-1UpTo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-1UpToTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -64,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5980DC4F020C8EFF6B58E94D022ED9D5</key>
+		<key>77DFDD598F9005ECC9067E4CAB018DC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>681BE6E3D02A43F9BA63777AC435C8FD</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -80,11 +73,6 @@
 			<true/>
 		</dict>
 		<key>BFED2E29E95E065400F8846E0231A970</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D9ECA263F152A60E8D2C6D9749DA42BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
