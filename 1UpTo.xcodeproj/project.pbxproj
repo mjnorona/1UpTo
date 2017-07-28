@@ -22,8 +22,8 @@
 		50442DE81F27BB9C00C75FCC /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE71F27BB9C00C75FCC /* Find.storyboard */; };
 		50442E561F2966BA00C75FCC /* AddEditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */; };
 		50442E581F2A77F000C75FCC /* CustomDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */; };
-		50442E751F2AED3A00C75FCC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50442E681F2AECEB00C75FCC /* Alamofire.framework */; };
-		50442E761F2AED3A00C75FCC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50442E681F2AECEB00C75FCC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50442E791F2AF65300C75FCC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50442E681F2AECEB00C75FCC /* Alamofire.framework */; };
+		50442E7A1F2AF65300C75FCC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50442E681F2AECEB00C75FCC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9303D0D41F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */; };
 		9303D14D1F2ADB9400D2CF71 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303D14C1F2ADB9400D2CF71 /* CreateGroupViewController.swift */; };
 		93AC0EE01F294AB80064E9F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */; };
@@ -97,7 +97,7 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		50442E771F2AED3A00C75FCC /* PBXContainerItemProxy */ = {
+		50442E7B1F2AF65300C75FCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50442E5C1F2AECEB00C75FCC /* Alamofire.xcodeproj */;
 			proxyType = 1;
@@ -107,13 +107,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9303D14A1F2ACE8A00D2CF71 /* Embed Frameworks */ = {
+		50442E7D1F2AF65300C75FCC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				50442E761F2AED3A00C75FCC /* Alamofire.framework in Embed Frameworks */,
+				50442E7A1F2AF65300C75FCC /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B00D9909B453539CE270E7 /* Pods_1UpTo.framework in Frameworks */,
-				50442E751F2AED3A00C75FCC /* Alamofire.framework in Frameworks */,
+				50442E791F2AF65300C75FCC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +297,12 @@
 				50442DAB1F26B01E00C75FCC /* Resources */,
 				562C7261E2D9607E39B3CE33 /* [CP] Embed Pods Frameworks */,
 				F98596836B66C54454DC1001 /* [CP] Copy Pods Resources */,
-				9303D14A1F2ACE8A00D2CF71 /* Embed Frameworks */,
+				50442E7D1F2AF65300C75FCC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				50442E781F2AED3A00C75FCC /* PBXTargetDependency */,
+				50442E7C1F2AF65300C75FCC /* PBXTargetDependency */,
 			);
 			name = 1UpTo;
 			productName = 1UpTo;
@@ -591,10 +591,10 @@
 			target = 50442DAC1F26B01E00C75FCC /* 1UpTo */;
 			targetProxy = 50442DC21F26B01E00C75FCC /* PBXContainerItemProxy */;
 		};
-		50442E781F2AED3A00C75FCC /* PBXTargetDependency */ = {
+		50442E7C1F2AF65300C75FCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = 50442E771F2AED3A00C75FCC /* PBXContainerItemProxy */;
+			targetProxy = 50442E7B1F2AF65300C75FCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

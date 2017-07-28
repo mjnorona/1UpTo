@@ -103,7 +103,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZB9-rr-rQ0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4F2-hy-BeF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4F2-hy-BeF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -122,7 +122,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bSH-Pe-xNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="nNP-ab-T2o"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QmP-5l-PBY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QmP-5l-PBY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
