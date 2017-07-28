@@ -47,8 +47,9 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
         //event handling
         print(currentUser?.profile.email ?? "")
         userEmail = (currentUser?.profile.email)!
+        print("Current useremail", userEmail)
         print(GIDSignIn.sharedInstance().hasAuthInKeychain())
-        print("Setting VC: " , currentUser?.profile.name ?? "")
+//        print("Setting VC: " , currentUser?.profile.name ?? "")
         service.authorizer = currentUser?.authentication.fetcherAuthorizer()
         
         fetchEvents()
@@ -132,7 +133,7 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
         
         let currentUser = GIDSignIn.sharedInstance().currentUser
         
-        createEvent(userEmail, participantEmail: "erickjin.lui@gmail.com", startDate: start, endDate: end, summary: summary!, recurrenceRule: "")
+        createEvent(userEmail, participantEmail: "", startDate: start, endDate: end, summary: summary!, recurrenceRule: "")
         print(start)
         print(end)
         print(summary!)
@@ -202,12 +203,12 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
         event.summary = summary
         //        event.recurrence = [recurrenceRule]
         
-        let attendee1 = GTLRCalendar_EventAttendee()
-        //        //        let attendee2 = GTLRCalendar_EventAttendee()
-        attendee1.email = participantEmail
-        //        //        attendee2.email = participantEmail
-        //        //        event.attendees = [attendee1, attendee2]
-        event.attendees = [attendee1]
+//        let attendee1 = GTLRCalendar_EventAttendee()
+//        //        //        let attendee2 = GTLRCalendar_EventAttendee()
+//        attendee1.email = participantEmail
+//        //        //        attendee2.email = participantEmail
+//        //        //        event.attendees = [attendee1, attendee2]
+//        event.attendees = [attendee1]
         
         //        let query = GTLQueryCalendar.queryForEventsInsert(withObject: event, calendarId: "primary")
         let query = GTLRCalendarQuery_EventsInsert.query(withObject: event, calendarId: "primary")
