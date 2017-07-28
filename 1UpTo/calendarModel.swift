@@ -18,8 +18,7 @@ class calendarModel {
         //AWS
         let url = URL(string: "http://34.213.11.157/groups")
         
-        //LocalHost
-//        let url = URL(string: "http://localhost:8000/groups")
+
         
         // Create a URLSession to handle the request tasks
         let session = URLSession.shared
@@ -39,9 +38,7 @@ class calendarModel {
         //AWS
         let url = URL(string: "http://34.213.11.157/users")
         
-        //LocalHost
-//        let url = URL(string: "http://localhost:8000/users")
-        
+
         // Create a URLSession to handle the request tasks
         let session = URLSession.shared
         // Create a "data task" which will request some data from a URL and then run the completion handler that we are passing into the getAllPeople function itself
@@ -60,8 +57,8 @@ class calendarModel {
         //AWS
         let url = URL(string: "http://34.213.11.157/users/\(groupName)")
         
-        //LocalHost
-//        let url = URL(string: "http://localhost:8000/users/\(groupName)")
+
+
         
         // Create a URLSession to handle the request tasks
         let session = URLSession.shared
@@ -76,7 +73,9 @@ class calendarModel {
     //add user in db
     static func addUser(username : String, userEmail: String, completionHandler : @escaping  (_ data : Data?, _ response : URLResponse?, _ error : Error?) -> Void) {
         
-        if let urlToReq = URL(string: "http:/34.213.11.157/add_user") {
+
+        if let urlToReq = URL(string: "http://34.213.11.157/add_user") {
+
             
             var request = URLRequest(url : urlToReq)
             
