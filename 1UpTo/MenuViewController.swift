@@ -31,7 +31,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         let currentUser = GIDSignIn.sharedInstance().currentUser
-        let profileURL = currentUser?.profile.imageURL(withDimension: 50)
+        let profileURL = currentUser?.profile.imageURL(withDimension: 500)
         profileImageView.image = UIImage(data : NSData(contentsOf : profileURL!)! as Data)
         profileImageView.isHidden = false
         userNameLabel.text = currentUser?.profile.name! ?? ""

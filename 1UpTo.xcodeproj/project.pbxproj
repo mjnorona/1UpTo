@@ -342,7 +342,7 @@
 				TargetAttributes = {
 					50442DAC1F26B01E00C75FCC = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = K942986D66;
+						DevelopmentTeam = G7WXCEU2YX;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -736,11 +736,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = K942986D66;
+				DEVELOPMENT_TEAM = G7WXCEU2YX;
 				INFOPLIST_FILE = 1UpTo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-UpTo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Aaron.-UpTo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "1UpTo/1UpTo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -755,11 +755,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = K942986D66;
+				DEVELOPMENT_TEAM = G7WXCEU2YX;
 				INFOPLIST_FILE = 1UpTo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-UpTo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Aaron.-UpTo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "1UpTo/1UpTo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
