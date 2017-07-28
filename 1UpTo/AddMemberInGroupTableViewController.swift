@@ -13,6 +13,8 @@ class AddMemberInGroupTableViewController: UITableViewController, UISearchBarDel
     var members = [NSDictionary]()
     var filterMembers = [NSDictionary]()
     
+    var groupMemberList = [NSDictionary]()
+    
      var searchController = UISearchController(searchResultsController: nil)
     
     func filterContentForSearchText(searchText : String, scope: String = "All") {
@@ -30,9 +32,11 @@ class AddMemberInGroupTableViewController: UITableViewController, UISearchBarDel
         //Set delegate
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.autocapitalizationType = .none
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
 
+        fetchAllUsers()
 
     }
 
@@ -74,14 +78,41 @@ class AddMemberInGroupTableViewController: UITableViewController, UISearchBarDel
     
     //select user and save into db
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+//         
         
+        if cell.accessoryType == .none {
+            cell.accessoryType = .checkmark
+            groupMemberList.append(members[indexPath.row])
+            
+        }else{
+            cell.accessoryType = .none
+            
+            
+            if groupMemberList.contains(members[indexPath.row]) {
+                if let itemToRemoveIdx = groupMemberList.index(of: members[indexPath.row]) {
+                    groupMemberList.remove(at: itemToRemoveIdx)
+                }
+            }
+            
+        }
     }
+    
+    
+    
+    
+    
+    
+    @IBAction func backBtnPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         
         // code here
         print(searchController.searchBar.text!)
-//        filterContentForSearchText(searchText: searchController.searchBar.text!)
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
         
     }
     
@@ -92,8 +123,8 @@ class AddMemberInGroupTableViewController: UITableViewController, UISearchBarDel
             data, response, error in
             do{
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
-                    print("results:", jsonResult)
-//                    self.members = jsonResult
+//                    print("results:", jsonResult)
+                    self.members = jsonResult
                 }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -107,6 +138,9 @@ class AddMemberInGroupTableViewController: UITableViewController, UISearchBarDel
     func saveUserIntoGroup() {
         
     }
+    
+    
+    
     
 
     

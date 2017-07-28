@@ -7,6 +7,7 @@ target '1UpTo' do
 pod 'Google/SignIn'
 pod 'JTAppleCalendar', '~> 7.0'
 pod 'GoogleAPIClientForREST/Calendar', '~> 1.2.1'
+pod 'Alamofire', '~> 4.4'
 # Pods for 1UpTo
 
   target '1UpToTests' do

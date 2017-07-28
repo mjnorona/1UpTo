@@ -20,12 +20,12 @@
 		50442DE31F27BB7500C75FCC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE21F27BB7500C75FCC /* Home.storyboard */; };
 		50442DE61F27BB8900C75FCC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE41F27BB8900C75FCC /* Settings.storyboard */; };
 		50442DE81F27BB9C00C75FCC /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50442DE71F27BB9C00C75FCC /* Find.storyboard */; };
-
-		9303D0D41F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */; };
-
 		50442E561F2966BA00C75FCC /* AddEditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */; };
 		50442E581F2A77F000C75FCC /* CustomDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */; };
-
+		9303D0D41F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */; };
+		9303D1461F2ACE8A00D2CF71 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9303D1131F2AC84A00D2CF71 /* Alamofire.framework */; };
+		9303D1471F2ACE8A00D2CF71 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9303D1131F2AC84A00D2CF71 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9303D14D1F2ADB9400D2CF71 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303D14C1F2ADB9400D2CF71 /* CreateGroupViewController.swift */; };
 		93AC0EE01F294AB80064E9F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */; };
 		93AC0EE21F296A2B0064E9F8 /* calendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EE11F296A2B0064E9F8 /* calendarModel.swift */; };
 		93AC0EE41F296E9E0064E9F8 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */; };
@@ -37,7 +37,7 @@
 		93E69E2B1F27D7A8000DC0AF /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E69E2A1F27D7A8000DC0AF /* MemoriesViewController.swift */; };
 		93E69E2D1F27D9F5000DC0AF /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E69E2C1F27D9F5000DC0AF /* GroupViewController.swift */; };
 		9B0B1E414F7B6B3385F9A56A /* Pods_1UpToTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */; };
-		E89D4FCC96F86AD6790FDFE1 /* Pods_1UpTo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */; };
+		B6B00D9909B453539CE270E7 /* Pods_1UpTo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,77 @@
 			remoteGlobalIDString = 50442DAC1F26B01E00C75FCC;
 			remoteInfo = 1UpTo;
 		};
+		9303D1121F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		9303D1141F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		9303D1161F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		9303D1181F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		9303D11A1F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		9303D11C1F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		9303D11E1F2AC84A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		9303D1481F2ACE8A00D2CF71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9303D14A1F2ACE8A00D2CF71 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9303D1471F2ACE8A00D2CF71 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B18D9BB07C1F5C08AD35DBA /* Pods-1UpToTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1UpToTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1UpToTests/Pods-1UpToTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +148,8 @@
 		7AE6EF932E37396F49139B67 /* Pods_1UpTo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpTo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928AB9F30B5ED37FD2ED6C49 /* Pods_1UpToTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1UpToTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemberInGroupTableViewController.swift; sourceTree = "<group>"; };
+		9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9303D14C1F2ADB9400D2CF71 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		93AC0EDF1F294AB80064E9F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		93AC0EE11F296A2B0064E9F8 /* calendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarModel.swift; sourceTree = "<group>"; };
 		93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberTableViewController.swift; path = ../MemberTableViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E89D4FCC96F86AD6790FDFE1 /* Pods_1UpTo.framework in Frameworks */,
+				B6B00D9909B453539CE270E7 /* Pods_1UpTo.framework in Frameworks */,
+				9303D1461F2ACE8A00D2CF71 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +207,7 @@
 		50442DA41F26B01E00C75FCC = {
 			isa = PBXGroup;
 			children = (
+				9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */,
 				50442DAF1F26B01E00C75FCC /* 1UpTo */,
 				50442DC41F26B01E00C75FCC /* 1UpToTests */,
 				50442DAE1F26B01E00C75FCC /* Products */,
@@ -172,6 +246,7 @@
 				50442E571F2A77F000C75FCC /* CustomDateTableViewCell.swift */,
 				50442E551F2966BA00C75FCC /* AddEditEventTableViewController.swift */,
 				50442DDF1F27BB5100C75FCC /* Group.storyboard */,
+				9303D14C1F2ADB9400D2CF71 /* CreateGroupViewController.swift */,
 				93AC0EE31F296E9E0064E9F8 /* MemberTableViewController.swift */,
 				9303D0D31F2A6CB300D2CF71 /* AddMemberInGroupTableViewController.swift */,
 				93AC0EE11F296A2B0064E9F8 /* calendarModel.swift */,
@@ -195,6 +270,20 @@
 			path = 1UpToTests;
 			sourceTree = "<group>";
 		};
+		9303D1081F2AC84A00D2CF71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9303D1131F2AC84A00D2CF71 /* Alamofire.framework */,
+				9303D1151F2AC84A00D2CF71 /* Alamofire iOS Tests.xctest */,
+				9303D1171F2AC84A00D2CF71 /* Alamofire.framework */,
+				9303D1191F2AC84A00D2CF71 /* Alamofire macOS Tests.xctest */,
+				9303D11B1F2AC84A00D2CF71 /* Alamofire.framework */,
+				9303D11D1F2AC84A00D2CF71 /* Alamofire tvOS Tests.xctest */,
+				9303D11F1F2AC84A00D2CF71 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,10 +297,12 @@
 				50442DAB1F26B01E00C75FCC /* Resources */,
 				562C7261E2D9607E39B3CE33 /* [CP] Embed Pods Frameworks */,
 				F98596836B66C54454DC1001 /* [CP] Copy Pods Resources */,
+				9303D14A1F2ACE8A00D2CF71 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9303D1491F2ACE8A00D2CF71 /* PBXTargetDependency */,
 			);
 			name = 1UpTo;
 			productName = 1UpTo;
@@ -274,6 +365,12 @@
 			mainGroup = 50442DA41F26B01E00C75FCC;
 			productRefGroup = 50442DAE1F26B01E00C75FCC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9303D1081F2AC84A00D2CF71 /* Products */;
+					ProjectRef = 9303D1071F2AC84A00D2CF71 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				50442DAC1F26B01E00C75FCC /* 1UpTo */,
@@ -281,6 +378,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9303D1131F2AC84A00D2CF71 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 9303D1121F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9303D1151F2AC84A00D2CF71 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 9303D1141F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9303D1171F2AC84A00D2CF71 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 9303D1161F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9303D1191F2AC84A00D2CF71 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = 9303D1181F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9303D11B1F2AC84A00D2CF71 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 9303D11A1F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9303D11D1F2AC84A00D2CF71 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 9303D11C1F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9303D11F1F2AC84A00D2CF71 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 9303D11E1F2AC84A00D2CF71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		50442DAB1F26B01E00C75FCC /* Resources */ = {
@@ -419,6 +568,7 @@
 				93E69E211F27BDB8000DC0AF /* SWRevealViewController.m in Sources */,
 				50442DD91F26D85400C75FCC /* CustomCell.swift in Sources */,
 				50442E581F2A77F000C75FCC /* CustomDateTableViewCell.swift in Sources */,
+				9303D14D1F2ADB9400D2CF71 /* CreateGroupViewController.swift in Sources */,
 				50442DD71F26C58E00C75FCC /* HomeViewController.swift in Sources */,
 				93AC0EE01F294AB80064E9F8 /* SettingsViewController.swift in Sources */,
 				50442E561F2966BA00C75FCC /* AddEditEventTableViewController.swift in Sources */,
@@ -440,6 +590,11 @@
 			isa = PBXTargetDependency;
 			target = 50442DAC1F26B01E00C75FCC /* 1UpTo */;
 			targetProxy = 50442DC21F26B01E00C75FCC /* PBXContainerItemProxy */;
+		};
+		9303D1491F2ACE8A00D2CF71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 9303D1481F2ACE8A00D2CF71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -578,10 +733,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A543F0177D128802C8CC0D9 /* Pods-1UpTo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K942986D66;
 				INFOPLIST_FILE = 1UpTo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-UpTo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -595,10 +752,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67441484D646EA50B0BFF9E6 /* Pods-1UpTo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K942986D66;
 				INFOPLIST_FILE = 1UpTo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-UpTo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
