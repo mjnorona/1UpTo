@@ -40,17 +40,19 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "memberSegue", sender: groups[indexPath.row]["members"])
+        performSegue(withIdentifier: "memberSegue", sender: groups[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "memberSegue" {
             let navController = segue.destination as! UINavigationController
             let controller = navController.topViewController as! MemberTableViewController
-            controller.tempMembers = sender as? [String]
+            controller.tempGroup = sender as? NSDictionary
         
         }
     }
+    
+    
 
     
     
@@ -60,7 +62,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 data, response, error in
             do{
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
-                print("results:", jsonResult)
+//                print("results:", jsonResult)
                     self.groups = jsonResult
                 }
                 DispatchQueue.main.async {
@@ -70,6 +72,30 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         })
     
+    
+    }
+    
+    @IBAction func unWindFromCreateGroup(segue : UIStoryboardSegue) {
+        let source = segue.source as! CreateGroupViewController
+        let groupName = source.groupNameTextField.text
+        
+        calendarModel.addNewGroup(groupName: groupName!, completionHandler: {
+            data,response,error in
+            
+            do{
+                if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
+//                    print("results:", jsonResult)
+                    self.groups = jsonResult
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }catch{
+            }
+            
+            
+        })
     
     }
 

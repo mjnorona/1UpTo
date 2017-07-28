@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import Alamofire
 
 class MemberTableViewController: UITableViewController {
     
-    var members = [String]()
+    var members = [NSDictionary]()
     
-    var tempMembers : [String]?
+    var tempGroup : NSDictionary?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        members = tempMembers!
+        
+        navigationItem.title = tempGroup?["name"] as? String
+        
+        getAllMembersFromGroup(groupName: tempGroup?["name"] as! String)
         
     }
 
@@ -26,7 +30,6 @@ class MemberTableViewController: UITableViewController {
         
     }
 
-    // MARK: - Table view data source
 
    
 
@@ -36,8 +39,9 @@ class MemberTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = members[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
+        cell.textLabel?.text = members[indexPath.row]["name"] as? String
+        cell.detailTextLabel?.text = members[indexPath.row]["email"] as? String
         return cell
     }
     
@@ -54,6 +58,76 @@ class MemberTableViewController: UITableViewController {
         
         }
     }
+    
+    
+    
 
+    @IBAction func backBtnPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+
+    }
+    
+    
+    
+    
+    
+    func getAllMembersFromGroup(groupName : String){
+        
+        calendarModel.getAllMembersinGroup(groupName: groupName, completionHandler: {
+            data, response, error in
+            do{
+                if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
+//                    print("results:", jsonResult)
+                    self.members = jsonResult
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }catch{
+            }
+        })
+    }
+    
+    
+    
+    @IBAction func unWindFromMemberList(segue : UIStoryboardSegue) {
+        
+        let source = segue.source as! AddMemberInGroupTableViewController
+        let membersList = source.groupMemberList
+        
+
+        
+        let groupName = (tempGroup?["name"] as? String)!
+        
+        
+        let parameters: Parameters = [
+            "member": membersList,
+        ]
+        
+        Alamofire.request("http://34.213.11.157/members/\(groupName)", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: {
+            response in
+            
+            if let groups = response.result.value as? [NSDictionary] {
+                print("group Results: ", groups)
+                
+                
+                self.getAllMembersFromGroup(groupName: self.tempGroup?["name"] as! String)
+            
+            }
+        
+        
+        })
+        
+        
+        
+    
+    }
+    
+    
+    
+    
+    
+    
 
 }
