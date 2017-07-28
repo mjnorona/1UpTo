@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l8Y-Ib-F7c" id="lkA-jU-6Q8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -159,7 +159,7 @@
                                 <action selector="backBtnPressed:" destination="0XM-5s-4UB" id="7Ta-wg-1ey"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add member" id="reI-ur-clQ">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-Add User Group Man Man-25" id="reI-ur-clQ">
                             <connections>
                                 <action selector="addMemberBtnPressed:" destination="0XM-5s-4UB" id="Eob-cU-EgY"/>
                             </connections>
@@ -234,7 +234,7 @@
         <scene sceneID="9Cj-9O-szL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dKQ-5M-5U2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="jYS-rO-gXs"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="icons8-User Group Man Man-25" id="jYS-rO-gXs"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="N62-o4-WWJ">
@@ -305,4 +305,8 @@
             <point key="canvasLocation" x="3316" y="237.93103448275863"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Add User Group Man Man-25" width="25" height="25"/>
+        <image name="icons8-User Group Man Man-25" width="25" height="25"/>
+    </resources>
 </document>
