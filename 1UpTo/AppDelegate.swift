@@ -29,6 +29,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().scopes = scopes
+        
+        
+        //color
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.03, green:0.55, blue:0.55, alpha:1.0)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        UITabBar.appearance().backgroundColor = UIColor(red:0.03, green:0.55, blue:0.55, alpha:1.0)
+        UITabBar.appearance().tintColor = UIColor.white
+        
+        
         return true
     }
     

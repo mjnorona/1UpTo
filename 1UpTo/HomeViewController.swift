@@ -24,9 +24,17 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
     private let service = GTLRCalendarService()
     var userEmail = ""
     
-    
-    @IBAction func signOutButtonPressed(_ sender: Any) {
-        GIDSignIn.sharedInstance().signOut()
+    //color navigation
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.17, green:0.24, blue:0.27, alpha:1.0)
+//        self.navigationController?.navigationBar.tintColor = UIColor.white
+//        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white
+//        ]
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor(red:0.03, green:0.55, blue:0.55, alpha:1.0)
+        self.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.red], for:.selected)
+        
     }
     
     
@@ -76,10 +84,10 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
         guard let validCell = view as? CustomCell else {return}
         if validCell.isSelected {
-            validCell.dateLabel.textColor = UIColor.white
+            validCell.dateLabel.textColor = UIColor(red:0.03, green:0.30, blue:0.46, alpha:1.0)
         } else {
             if cellState.dateBelongsTo == .thisMonth {
-                validCell.dateLabel.textColor = UIColor.black
+                validCell.dateLabel.textColor = UIColor.white
             } else {
                 validCell.dateLabel.textColor = UIColor.gray
             }

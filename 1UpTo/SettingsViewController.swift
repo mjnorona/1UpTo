@@ -16,6 +16,10 @@ class SettingsViewController: UIViewController,GIDSignInUIDelegate {
     var userEmail = ""
 
     @IBOutlet weak var output: UITextView!
+    
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

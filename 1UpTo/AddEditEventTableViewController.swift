@@ -45,7 +45,7 @@ class AddEditEventTableViewController: UITableViewController {
     
     
     @IBAction func startDatePickerChanged(_ sender: UIDatePicker) {
-        dateFormatter.dateFormat = "MMM dd, YYYY"
+        dateFormatter.dateFormat = "MMM d, YYYY"
         timeFormatter.dateFormat = "h:mm a"
         
         let startDate = dateFormatter.string(from: startDatePicker.date)
@@ -58,8 +58,11 @@ class AddEditEventTableViewController: UITableViewController {
     
     
     
+    
+    
+    
     @IBAction func endDatePickerChanged(_ sender: UIDatePicker) {
-        dateFormatter.dateFormat = "MMM dd, YYYY"
+        dateFormatter.dateFormat = "MMM d, YYYY"
         timeFormatter.dateFormat = "h:mm a"
         
         let endDate = dateFormatter.string(from: endDatePicker.date)
@@ -80,7 +83,7 @@ class AddEditEventTableViewController: UITableViewController {
         
         dateFormatter.dateFormat = "MMM d, YYYY"
         timeFormatter.dateFormat = "h:mm a"
-
+        self.hideKeyboardWhenTappedAround()
         
         
         let calendar = Calendar.current
@@ -107,8 +110,7 @@ class AddEditEventTableViewController: UITableViewController {
         
         
         
-        
-        // Uncomment the following line to preserve selection between presentations
+        self.tableView.backgroundColor = UIColor(red:0.00, green:0.28, blue:0.29, alpha:1.0)        // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -119,8 +121,17 @@ class AddEditEventTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 
+}
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
